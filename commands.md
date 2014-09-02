@@ -28,17 +28,17 @@ sysctl net.inet.tcp.delayed_ack=0       # disable delayed ack in tcp
 ```
 top                                     # display and update information about the top cpu processes
 ps auxwww | grep <processname>          # display process status
-systat                        # show general overview of load, memory, interrupts, disk io
+systat									# show general overview of load, memory, interrupts, disk io
 ```
 
 
 # Packages
-pkg search <packagename>                # search for binary packages
-pkg_add -r <packagename>               # install binary package and its dependencies
+```
+pkg_info <packagename>                	# search for binary packages
+pkg_add -r <packagename>                # install binary package and its dependencies
 pkg_info                                # show list of currently installed ports/packages with version info
-pkg version                             # show which ports/packages are outdated and need an update
-pkg_add -u upgrade <packagename>               # upgrade a packages or alle packages
-pkg_info <packagename>                    # find out which package installed
+pkg_add -u upgrade <packagename>        # upgrade a packages or alle packages
+pkg_info <packagename>                  # find out which package installed
 ```
 
 
@@ -55,12 +55,10 @@ route add -net <ip/mask> <gw_ip>        # add a custom route for given network
 netstat -rn                             # display routing table
 netstat -an                             # display all connections
 netstat -m                              # display buffer usage
-netstat -Lan                            # display status of listen queues
 netstat -s                              # display extensive statistics per protocol (use -p tcp to only show tcp)
 sysctl kern.ipc.numopensockets          # display number of open sockets
 vmstat -z | egrep "ITEM|tcpcb"          # number of hash table buckets to handle incoming tcp connections
                                           increase net.inet.tcp.tcbhashsize if hitting the limit
-sysctl net.inet.tcp.hostcache.list      # display current content of hostcache with its parameters per IP
 ```
 
 
