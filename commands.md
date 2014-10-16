@@ -37,7 +37,8 @@ systat									# show general overview of load, memory, interrupts, disk io
 pkg_info <packagename>                	# search for binary packages
 pkg_add -r <packagename>                # install binary package and its dependencies
 pkg_info                                # show list of currently installed ports/packages with version info
-pkg_add -u upgrade <packagename>        # upgrade a packages or alle packages
+pkg_add -u upgrade <packagename>        # upgrade a packages or all packages
+pkg_add -uvi 
 pkg_info <packagename>                  # find out which package installed
 ```
 
