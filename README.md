@@ -7,3 +7,6 @@ This a collection of commands and intstructions to accomplish common tasks on op
 
 ---
 Based on [freeBSD Toolbox](https://github.com/hukl/freebsd-toolbox)
+
+---
+help
